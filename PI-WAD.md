@@ -28,7 +28,12 @@ Nesse projeto sera desenvolvido um sistema de reserva de salas para agendamentos
 
 ### 2.1. Personas (Semana 01)
 
-*Posicione aqui sua(s) Persona(s) em forma de texto markdown com imagens, ou como imagem de template preenchido. Atualize esta seção ao longo do módulo se necessário.*
+<div align="center">
+    <small><strong style="font-size: 12px;">Persona(Figura 1);</strong></small><br>
+        <img src="/foto_persona.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
 
 ### 2.2. User Stories (Semana 01)
 
@@ -36,7 +41,7 @@ Nesse projeto sera desenvolvido um sistema de reserva de salas para agendamentos
 
 Como estudante universitário, quero reservar salas de estudo, para que eu possa usar elas.
 
-Como estudante universitário, quero que o sistema tenha um sistema de login, para que eu possa acessasr com diferentes dispositivos
+Como estudante universitário, quero que o sistema tenha um sistema de login, para que eu possa acessar com diferentes dispositivos
 
 Como estudante universitário, quero que o sistema me lembre das reservas com uma notificação, para que eu possa me lembrar das reservas
 
