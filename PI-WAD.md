@@ -18,15 +18,17 @@
 
 ## <a name="c1"></a>1. Introdução (Semana 01)
 
-*Preencha com até 300 palavras – sem necessidade de fonte.*
-Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas. Esse sistema tera tres dados importantes para o banco de dados, uma estrutura para armazenamento de informações: o usuario as salas e o agendamento. Na aplicação web também sera utilizado backend, uma implementação da lógica de negócio e conexão e frontend, uma interface intuitiva para interação do usuário. Além disso o código inteiro deve ser documentado no GitHub.
-*Descreva brevemente o sistema que você irá desenvolver.*
+
+Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas. Esse sistema tera três dados importantes para o banco de dados, uma estrutura para armazenamento de informações: o usuario as salas e o agendamento. Na aplicação web também sera utilizado backend, uma implementação da lógica de negócio e conexão e frontend, uma interface intuitiva para interação do usuário. Além disso o código inteiro sera documentado no GitHub.
+
 
 ---
 
 ## <a name="c2"></a>2. Visão Geral da Aplicação Web
 
 ### 2.1. Personas (Semana 01)
+
+A personas vai servir para representar o cliente do sistema. Com ela podemos entender mais sobre suas necessidades, comportamentos e objetivos; isso acaba ajudando no desenvolvimento de produtos e serviços.
 
 <div align="center">
     <small><strong style="font-size: 12px;">Persona(Figura 1);</strong></small><br>
@@ -45,12 +47,12 @@ Como estudante universitário, quero que o sistema me lembre das reservas com um
 
 A terceira user story se encaixa em cada um dos critérios INVEST pois
 
-I – A notificação não depende de outros usuários do sistema.
-N – O modelo, ou como a notificação aparece pode ser negociado ao longo do projeto
-V – Valiosa porque lembra a pessoa que ela tem uma reserva
-E – Estimavel porque é possivel fazer um estudo que compara as pessoas que lembram de usar a sala com a notificação x quem não usa a notificação
-S – é algo simples facil e gerenciável de fazer
-T – voce pode testar com usuários se a notificação aparece quando ele adiciona ela
+I – A notificação não depende de outros usuários do sistema.<br>
+N – O modelo, ou como a notificação aparece pode ser negociado ao longo do projeto<br>
+V – Valiosa porque lembra a pessoa que ela tem uma reserva<br>
+E – Estimavel porque é possivel fazer um estudo que compara as pessoas que lembram de usar a sala com a notificação x quem não usa a notificação<br>
+S – É algo simples facil e gerenciável de fazer<br>
+T – É pode testar com usuários se a notificação aparece quando ativada
 
 ---
 
