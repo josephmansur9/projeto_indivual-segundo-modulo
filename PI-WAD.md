@@ -19,7 +19,7 @@
 ## <a name="c1"></a>1. Introdução (Semana 01)
 
 *Preencha com até 300 palavras – sem necessidade de fonte.*
-Nesse projeto sera desenvolvido um sistema de reserva de salas para agendamentos. Para que ele possa ser realizado sera usado banco de dados, uma estrutura para armazenamento de informações; também sera utilizado backend uma implementação da lógica de negócio e conexão, frontend uma interface intuitiva para interação do usuário. Além disso o código inteiro deve ser documentado no GitHub.
+Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas. Esse sistema tera tres dados importantes para o banco de dados, uma estrutura para armazenamento de informações: o usuario as salas e o agendamento. Na aplicação web também sera utilizado backend, uma implementação da lógica de negócio e conexão e frontend, uma interface intuitiva para interação do usuário. Além disso o código inteiro deve ser documentado no GitHub.
 *Descreva brevemente o sistema que você irá desenvolver.*
 
 ---
@@ -36,8 +36,6 @@ Nesse projeto sera desenvolvido um sistema de reserva de salas para agendamentos
 
 
 ### 2.2. User Stories (Semana 01)
-
-*Posicione aqui a lista de User Stories levantadas para o projeto. Siga o template de User Stories e utilize a referência USXX para numeração (US01, US02, US03, ...). Indique todas as User Stories mapeadas, mesmo aquelas que não forem implementadas ao longo do projeto. Não se esqueça de explicar o INVEST de 1 User Storie prioritária.*
 
 Como estudante universitário, quero reservar salas de estudo, para que eu possa usar elas.
 
