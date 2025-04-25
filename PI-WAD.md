@@ -19,7 +19,7 @@
 ## <a name="c1"></a>1. Introdução (Semana 01)
 
 
-Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas. Esse sistema tera três dados importantes para o banco de dados, uma estrutura para armazenamento de informações: o usuario as salas e o agendamento. Na aplicação web também sera utilizado backend, uma implementação da lógica de negócio e conexão e frontend, uma interface intuitiva para interação do usuário. Além disso o código inteiro sera documentado no GitHub.
+Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas. Esse sistema tera três dados importantes para o banco de dados, uma estrutura para armazenamento de informações: o usuario, as salas e o agendamento. Nessa aplicação web também sera utilizado backend, uma implementação da lógica de negócio e conexão e frontend, uma interface intuitiva para interação do usuário. Sera feito também Personas e User Stories para ajudar no entendimento do serviço que o nosso parceiro quer. A persona vai ser uma proto persona, que sera construida na com base em supocições e palpites sobre o nosso cliente. Além disso o código inteiro sera documentado no GitHub.
 
 
 ---
@@ -32,16 +32,16 @@ A personas vai servir para representar o cliente do sistema. Com ela podemos ent
 
 <div align="center">
     <small><strong style="font-size: 12px;">Persona(Figura 1);</strong></small><br>
-        <img src="/foto_persona.png">
+        <img src="/foto_persona1.png">
     <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
 </div>
 
 
 ### 2.2. User Stories (Semana 01)
 
-Como estudante universitário, quero reservar salas de estudo, para que eu possa estudar nelas.
+Como estudante universitário, quero poder reservar salas de estudo, para que eu possa estudar nelas.
 
-Como estudante universitário, quero que o sistema tenha um sistema de login, para que eu possa acessar com diferentes dispositivos
+Como estudante universitário, quero que o sistema tenha um sistema de login, para que eu possa acessar o sistema de diferentes dispositivos
 
 Como pessoa que usa o celular regularmente, quero que o sistema me lembre das reservas com uma notificação, para que eu possa me lembrar das reservas
 
