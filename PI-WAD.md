@@ -37,11 +37,11 @@ Nesse projeto sera desenvolvido um sistema de agendamentos para reserva de salas
 
 ### 2.2. User Stories (Semana 01)
 
-Como estudante universitário, quero reservar salas de estudo, para que eu possa usar elas.
+Como estudante universitário, quero reservar salas de estudo, para que eu possa estudar nelas.
 
 Como estudante universitário, quero que o sistema tenha um sistema de login, para que eu possa acessar com diferentes dispositivos
 
-Como estudante universitário, quero que o sistema me lembre das reservas com uma notificação, para que eu possa me lembrar das reservas
+Como pessoa que usa o celular regularmente, quero que o sistema me lembre das reservas com uma notificação, para que eu possa me lembrar das reservas
 
 A terceira user story se encaixa em cada um dos critérios INVEST pois
 
