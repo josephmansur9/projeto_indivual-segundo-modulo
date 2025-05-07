@@ -80,7 +80,17 @@ T – É pode testar com usuários se a notificação aparece quando ativada
 
 ### 3.3. Wireframes (Semana 03)
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+<div align="center">
+    <small><strong style="font-size: 12px;">wireframe1(Figura 1);</strong></small><br>
+        <img src="/assets/wireframe1.jpg">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+<div align="center">
+    <small><strong style="font-size: 12px;">wireframe2(Figura 1);</strong></small><br>
+        <img src="/assets/wireframe2.jpg">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
 
 ### 3.4. Guia de estilos (Semana 05)
 
