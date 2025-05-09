@@ -66,7 +66,11 @@ T – É pode testar com usuários se a notificação aparece quando ativada
     <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
 </div>
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+A tabela "users" vai conter o id do usuario que vai ser a primary key, ela também tera o nome do usuario que podera ter até 50 palavras, o sobrenome e o id do curso que sera em numeros inteiros. 
+A tabela cursos foi criada para facilitar na identificação do usuário, o id do curso sera o mesmo id cursos da tabela users, além disso a tabela users tera o nome do curso e o nome de um coordenador caso algo de errado na reserva e um responsavel precise ser contatado.
+A terceira tabela sera rooms que tera uma capacidade em numeros inteiros, o id da sala e o nome da sala que estara linkado com o id do usuario. 
+Por fim a tabela de reservas tera um id da reserva, o id do usuario e o id da sala, uma data da reserva que vai estar em timestamp e uma descrição para ajudar a pessoa a lembrar para o que reservou a sala com um maximo de até 100 palavras. O user id vai referenciar o nome da sala que por sua vez esta referenciando o id do usuario; e o id da sala vai referenciar o id da sala da tabela sala.
+
 <a href="/scripts/init.sql">Clique aqui</a> para ir para o modelo físico com o Schema do BD (arquivo .sql)
 
 ### 3.1.1 BD e Models (Semana 5)
