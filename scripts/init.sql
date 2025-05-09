@@ -30,3 +30,8 @@ ALTER TABLE bookings ADD FOREIGN KEY (user_id) REFERENCES users (id);
 ALTER TABLE bookings ADD FOREIGN KEY (room_id) REFERENCES rooms (room_id);
 
 ALTER TABLE users ADD FOREIGN KEY (id_curso) REFERENCES cursos (id);
+
+INSERT INTO users (name, lastname, id_curso)
+VALUES ('grabiel', 'mansur', null),
+('henrique', 'suttn', null),
+('rafael', 'felps', null)

@@ -1,6 +1,6 @@
 // controllers/userController.js
 
-const userService = require("../services/userService");
+const userService = require('../services/userService');
 
 const getAllUsers = async (req, res) => {
   try {
@@ -17,7 +17,7 @@ const getUserById = async (req, res) => {
     if (user) {
       res.status(200).json(user);
     } else {
-      res.status(404).json({ error: "Usuário não encontrado" });
+      res.status(404).json({ error: 'Usuário não encontrado' });
     }
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -37,15 +37,11 @@ const createUser = async (req, res) => {
 const updateUser = async (req, res) => {
   try {
     const { name, email } = req.body;
-    const updatedUser = await userService.updateUser(
-      req.params.id,
-      name,
-      email
-    );
+    const updatedUser = await userService.updateUser(req.params.id, name, email);
     if (updatedUser) {
       res.status(200).json(updatedUser);
     } else {
-      res.status(404).json({ error: "Usuário não encontrado" });
+      res.status(404).json({ error: 'Usuário não encontrado' });
     }
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -58,7 +54,7 @@ const deleteUser = async (req, res) => {
     if (deletedUser) {
       res.status(200).json(deletedUser);
     } else {
-      res.status(404).json({ error: "Usuário não encontrado" });
+      res.status(404).json({ error: 'Usuário não encontrado' });
     }
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -70,5 +66,5 @@ module.exports = {
   getUserById,
   createUser,
   updateUser,
-  deleteUser,
+  deleteUser
 };
