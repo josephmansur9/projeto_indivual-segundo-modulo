@@ -3,6 +3,7 @@
 **_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final._**
 
 ## Nome do Projeto
+Reserva Salas
 
 #### Autor do projeto
 
@@ -103,12 +104,14 @@ Por fim a tabela de reservas tera um id da reserva, o id do usuario e o id da sa
 
 ### 3.4. Guia de estilos (Semana 05)
 
-*Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução.*
+https://www.figma.com/design/mWxMVYY35qX1HZtdzik1r2/projeto-individual-UX?node-id=0-1&t=yY9yOs6GXls7o1O0-1
+
+<img src="/assets/guiacores.png">
 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 
-*Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
+<img src="/assets/prototipo.png">
 
 ### 3.6. WebAPI e endpoints (Semana 05)
 
