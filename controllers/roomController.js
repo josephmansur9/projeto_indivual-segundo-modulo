@@ -1,17 +1,17 @@
 const db = require("../config/db");
 
-const getAllUsers = async (req, res) => {
+const getAllRooms = async (req, res) => {
   try {
-    const result = await db.query("SELECT * FROM users");
+    const result = await db.query("SELECT * FROM rooms");
     res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
 
-const getUserById = async (req, res) => {
+const getRoomById = async (req, res) => {
   try {
-    const result = await db.query("SELECT * FROM users WHERE id = $1", [
+    const result = await db.query("SELECT * FROM rooms WHERE id = $1", [
       req.params.id,
     ]);
     const user = result.rows[0];
@@ -25,12 +25,12 @@ const getUserById = async (req, res) => {
   }
 };
 
-const createUser = async (req, res) => {
+const createRoom = async (req, res) => {
   try {
-    const { name, lastname, id_curso } = req.body;
+    const { room_name, capacity } = req.body;
     const result = await db.query(
-      "INSERT INTO users (name, lastname, id_curso) VALUES ($1, $2, $3) RETURNING *",
-      [name, lastname, id_curso]
+      "INSERT INTO rooms (room_name, capacity) VALUES ($1, $2) RETURNING *",
+      [room_name, capacity]
     );
     res.status(201).json(result.rows[0]);
   } catch (error) {
@@ -38,16 +38,16 @@ const createUser = async (req, res) => {
   }
 };
 
-const updateUser = async (req, res) => {
+const updateRoom = async (req, res) => {
   try {
-    const { name, lastname, id_curso } = req.body;
+    const { room_name, capacity } = req.body;
     const result = await db.query(
-      "UPDATE users SET name = $1, lastname = $2, id_curso = $3 WHERE id = $4 RETURNING *",
-      [name, lastname, id_curso, req.params.id]
+      "UPDATE rooms SET room_name = $1, capacity = $2 WHERE id = $3 RETURNING *",
+      [room_name, capacity, req.params.id]
     );
-    const updatedUser = result.rows[0];
-    if (updatedUser) {
-      res.status(200).json(updatedUser);
+    const updatedRoom = result.rows[0];
+    if (updatedRoom) {
+      res.status(200).json(updatedRoom);
     } else {
       res.status(404).json({ error: "Usuário não encontrado" });
     }
@@ -56,15 +56,15 @@ const updateUser = async (req, res) => {
   }
 };
 
-const deleteUser = async (req, res) => {
+const deleteRoom = async (req, res) => {
   try {
     const result = await db.query(
-      "DELETE FROM users WHERE id = $1 RETURNING *",
+      "DELETE FROM rooms WHERE id = $1 RETURNING *",
       [req.params.id]
     );
-    const deletedUser = result.rows[0];
-    if (deletedUser) {
-      res.status(200).json(deletedUser);
+    const deletedRoom = result.rows[0];
+    if (deletedRoom) {
+      res.status(200).json(deletedRoom);
     } else {
       res.status(404).json({ error: "Usuário não encontrado" });
     }
@@ -74,9 +74,9 @@ const deleteUser = async (req, res) => {
 };
 
 module.exports = {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser,
+  getAllRooms,
+  getRoomById,
+  createRoom,
+  updateRoom,
+  deleteRoom,
 };

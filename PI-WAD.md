@@ -75,18 +75,20 @@ Por fim a tabela de reservas tera um id da reserva, o id do usuario e o id da sa
 <a href="/scripts/init.sql">Clique aqui</a> para ir para o modelo físico com o Schema do BD (arquivo .sql)
 
 ### 3.1.1 BD e Models (Semana 5)
-*Descreva aqui os Models implementados no sistema web*
+Na estrutura MVC os Models interagem com o banco de dados diretamente, os métodos são acionados pelos controllers e executam ações CRUD como criar, ler, atualizar e deletar. Esse sistema possui 3 models, sendo booking, room e user.
+No model Booking por exemplo, ele contém funções específicas, tais como:
 
+getAllRooms(): Executa uma query SELECT para retornar todos os registros da tabela bookings.
+getRoomById(id): Recebe o parâmetro id e executa uma query SELECT filtrando uma reserva específica pelo booking_id.
+createRoom(data): Recebe os dados de uma nova reserva e executa uma query INSERT para armazená-la na tabela bookings.
+updateRoom(id, data): Recebe um id e os novos dados para atualizar o registro correspondente usando uma query UPDATE na tabela bookings.
+deleteRoom(id): Recebe o id e executa uma query DELETE para remover a reserva do banco.
+
+Os outros dois models seguem padrões muito parecidos.
 ### 3.2. Arquitetura (Semana 5)
 
-*Posicione aqui o diagrama de arquitetura da sua solução de aplicação web. Atualize sempre que necessário.*
-
-**Instruções para criação do diagrama de arquitetura**  
-- **Model**: A camada que lida com a lógica de negócios e interage com o banco de dados.
-- **View**: A camada responsável pela interface de usuário.
-- **Controller**: A camada que recebe as requisições, processa as ações e atualiza o modelo e a visualização.
-  
-*Adicione as setas e explicações sobre como os dados fluem entre o Model, Controller e View.*
+foto
+<img src="/assets/f.png">
 
 ### 3.3. Wireframes (Semana 03)
 
@@ -104,19 +106,65 @@ Por fim a tabela de reservas tera um id da reserva, o id do usuario e o id da sa
 
 ### 3.4. Guia de estilos (Semana 05)
 
-https://www.figma.com/design/mWxMVYY35qX1HZtdzik1r2/projeto-individual-UX?node-id=0-1&t=yY9yOs6GXls7o1O0-1
+
+### Guia de Cores
 
 <img src="/assets/guiacores.png">
+
+### Guia de Estilos
+
+<img src="/assets/guiaestilos.png">
+
+---
+
+Todo o design foi desenvolvido no Figma e está disponível para visualização através do seguinte link:
+
+[Link para o projeto no Figma](https://www.figma.com/design/mWxMVYY35qX1HZtdzik1r2/projeto-individual-UX?node-id=0-1&t=yY9yOs6GXls7o1O0-1)
 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 
-<img src="/assets/prototipo.png">
+### Tela de Login
+
+<img src="/assets/telalogin.png">
+
+### Tela de Reservas
+
+<img src="/assets/telareserva.png">
+
+### Tela de Cadastro
+
+<img src="/assets/telacadastro.png">
+
+### Tela de Notificações
+
+<img src="/assets/telanoti.png">
+
 
 ### 3.6. WebAPI e endpoints (Semana 05)
+Em uma aplicação web, os endpoints são como os endereços específicos para onde você envia requisições e de onde recebe respostas. Cada endpoint tem uma rota especifica para buscar ou deletar dados por exemplo. Os endpoints são muito importantes para API's, mantendo uma estrutura organizada e segura, como os exemplos a seguir:
 
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
+# Rotas da API de Booking
 
+| Método | Rota      | Descrição           | Controller                     |
+|--------|-----------|---------------------|--------------------------------|
+| `GET`  | `/`       | Listar todos        | `bookingController.getAllBookings` |
+| `GET`  | `/:id`    | Obter detalhes      | `bookingController.getBookingById` |
+| `POST` | `/`       | Criar novo          | `bookingController.createBooking` |
+| `PUT`  | `/:id`    | Atualizar existente | `bookingController.updateBooking` |
+| `DELETE`|`/:id`    | Deletar registro    | `bookingController.deleteBooking` |
+
+---
+
+# Rotas da API de Room
+
+| Método | Rota      | Descrição           | Controller                     |
+|--------|-----------|---------------------|--------------------------------|
+| `GET`  | `/`       | Listar todos        | `roomController.getAllRooms`   |
+| `GET`  | `/:id`    | Obter detalhes      | `roomController.getRoomById`   |
+| `POST` | `/`       | Criar novo          | `roomController.createRoom`    |
+| `PUT`  | `/:id`    | Atualizar existente | `roomController.updateRoom`    |
+| `DELETE`|`/:id`    | Deletar registro    | `roomController.deleteRoom`    |
 ### 3.7 Interface e Navegação (Semana 07)
 
 *Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*

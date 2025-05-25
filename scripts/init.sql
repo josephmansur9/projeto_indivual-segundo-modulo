@@ -1,37 +1,45 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
-  name varchar(50),
-  lastname varchar(200),
+  name VARCHAR(50),
+  lastname VARCHAR(200),
   id_curso INT
 );
 
-CREATE TABLE cursos (
+CREATE TABLE IF NOT EXISTS cursos (
   id SERIAL PRIMARY KEY,
-  nome_curso varchar(50),
-  coordenador varchar(50)
+  nome_curso VARCHAR(50),
+  coordenador VARCHAR(50)
 );
 
-CREATE TABLE rooms (
+CREATE TABLE IF NOT EXISTS rooms (
   room_id SERIAL PRIMARY KEY,
-  room_name varchar(200),
+  room_name VARCHAR(200),
   capacity INT
 );
 
-CREATE TABLE bookings (
-  booking_id SERIAL,
+CREATE TABLE IF NOT EXISTS bookings (
+  booking_id SERIAL PRIMARY KEY,
   user_id INT,
   room_id INT,
-  booking_data timestamp,
-  descricao varchar(100)
+  booking_data TIMESTAMP,
+  descricao VARCHAR(100)
 );
 
-ALTER TABLE bookings ADD FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE bookings ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE bookings ADD CONSTRAINT fk_room FOREIGN KEY (room_id) REFERENCES rooms (room_id);
+ALTER TABLE users ADD CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES cursos (id);
 
-ALTER TABLE bookings ADD FOREIGN KEY (room_id) REFERENCES rooms (room_id);
+INSERT INTO cursos (nome_curso, coordenador) VALUES ('Engenharia Civil', 'João Silva');
+INSERT INTO cursos (nome_curso, coordenador) VALUES ('Ciência da Computação', 'Maria Souza');
 
-ALTER TABLE users ADD FOREIGN KEY (id_curso) REFERENCES cursos (id);
+INSERT INTO users (name, lastname, id_curso) VALUES ('Carlos', 'Oliveira', 1);
+INSERT INTO users (name, lastname, id_curso) VALUES ('Ana', 'Lima', 2);
 
-INSERT INTO users (name, lastname, id_curso)
-VALUES ('grabiel', 'mansur', null),
-('henrique', 'suttn', null),
-('rafael', 'felps', null)
+INSERT INTO rooms (room_name, capacity) VALUES ('Auditório Principal', 100);
+INSERT INTO rooms (room_name, capacity) VALUES ('Laboratório de Computação', 30);
+
+INSERT INTO bookings (user_id, room_id, booking_data, descricao)
+VALUES (1, 1, '2025-06-01 10:00:00', 'Palestra sobre estruturas');
+
+INSERT INTO bookings (user_id, room_id, booking_data, descricao)
+VALUES (2, 2, '2025-06-02 14:00:00', 'Workshop de Python');
