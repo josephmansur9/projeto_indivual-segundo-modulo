@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - Reserva de Salas</title>
+    <style>
+      body {
+        background: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .login-container {
+        background: #6c63ff;
+        border-radius: 24px;
+        box-shadow: 8px 8px 0 #e0e0ff;
+        padding: 40px 32px;
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .avatar {
+        background: #fff;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .avatar-icon {
+        width: 60px;
+        height: 60px;
+        fill: #6c63ff;
+      }
+      .login-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .login-form label {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 4px;
+      }
+      .login-form input {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+      .login-form button {
+        background: #423d7b;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background 0.2s;
+      }
+      .login-form button:hover {
+        background: #2d295a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="avatar">
+        <svg class="avatar-icon" viewBox="0 0 64 64">
+          <circle cx="32" cy="24" r="16" fill="#6c63ff" />
+          <ellipse cx="32" cy="48" rx="20" ry="12" fill="#6c63ff" />
+          <circle cx="32" cy="24" r="12" fill="#fff" />
+        </svg>
+      </div>
+      <form class="login-form" action="/users/verifyCredentials" method="POST">
+        <label for="usuario">Usuário</label>
+        <input
+          type="text"
+          id="usuario"
+          name="name"
+          required
+          autocomplete="username"
+        />
+
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="lastname"
+          required
+          autocomplete="current-password"
+        />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

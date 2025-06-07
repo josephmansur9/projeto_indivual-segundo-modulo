@@ -19,6 +19,14 @@ class User {
     return result.rows[0];
   }
 
+  static async verifyUserCredentials(name, lastname) {
+    const result = await db.query(
+      "SELECT * FROM users WHERE name = $1 AND lastname = $2",
+      [name, lastname]
+    );
+    return result.rows[0];
+  }
+
   static async update(id, data) {
     const result = await db.query(
       "UPDATE users SET name = $1, lastname = $2, id_curso = $3 WHERE id = $4 RETURNING *",

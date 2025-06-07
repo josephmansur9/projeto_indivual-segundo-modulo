@@ -1,4 +1,6 @@
 const db = require("../config/db");
+const UserModel = require("../models/userModel");
+const path = require("path");
 
 const getAllUsers = async (req, res) => {
   try {
@@ -73,10 +75,34 @@ const deleteUser = async (req, res) => {
   }
 };
 
+const verifyUserCredentials = async (req, res) => {
+  try {
+    const { name, lastname } = req.body;
+    const user = await UserModel.verifyUserCredentials(name, lastname);
+
+    if (!user) {
+      console.log("Usuário não encontrado");
+      return res.status(404).json({ error: "Usuário não encontrado" });
+    }
+    return res.render(path.join(__dirname, "../views/layout/main"), {
+      pageTitle: "Notificação",
+      content: path.join(__dirname, "../views/pages/views/reserva"),
+      name: user.name,
+      id: user.id,
+    });
+  } catch (error) {
+    console.error(error);
+    return res
+      .status(500)
+      .json({ error: "Erro ao verificar as credenciais do usuário!" });
+  }
+};
+
 module.exports = {
   getAllUsers,
   getUserById,
   createUser,
   updateUser,
   deleteUser,
+  verifyUserCredentials,
 };

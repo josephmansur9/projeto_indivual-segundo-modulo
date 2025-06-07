@@ -5,7 +5,20 @@ const db = require("./config/db");
 const path = require("path");
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views/pages"));
+app.use(express.static(path.join(__dirname, "views/images")));
+app.use(express.urlencoded({ extended: true }));
+
+const session = require("express-session");
+// ...existing code...
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false },
+  })
+);
 
 db.connect()
   .then(() => {

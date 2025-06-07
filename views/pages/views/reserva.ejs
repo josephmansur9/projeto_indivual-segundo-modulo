@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tela de Reservas</title>
+    <style>
+      body {
+        background: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background: #222;
+        color: #ccc;
+        padding: 18px 32px;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .main-container {
+        margin: 32px auto;
+        background: #fff;
+        border-radius: 12px;
+        max-width: 900px;
+        padding: 32px 40px 40px 40px;
+        box-shadow: 0 2px 12px #0001;
+      }
+      .barra {
+        background: #6c63ff;
+        height: 32px;
+        border-radius: 0 20px 20px 0;
+        margin-bottom: 32px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .bell {
+        position: absolute;
+        right: 10%;
+        top: -12px;
+        font-size: 2rem;
+        color: #ffc700;
+      }
+      .form-row {
+        display: flex;
+        gap: 32px;
+        margin-bottom: 32px;
+      }
+      .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      label {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: #222;
+        font-weight: 500;
+      }
+      input {
+        padding: 12px;
+        border-radius: 10px;
+        border: 1.5px solid #888;
+        font-size: 1rem;
+        margin-bottom: 0;
+        outline: none;
+      }
+      .actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 16px;
+      }
+      .btn-buscar {
+        background: #888;
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 28px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      .btn-limpar {
+        background: #b3adf7;
+        color: #423d7b;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 28px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      .btn-buscar:hover {
+        background: #666;
+      }
+      .btn-limpar:hover {
+        background: #6c63ff;
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .main-container {
+          padding: 16px;
+        }
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Tela de Reservas</div>
+    <div class="main-container">
+      <div class="barra">
+        <span class="bell">&#128276;</span>
+      </div>
+      <form action="/reservas" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data:</label>
+            <input
+              type="text"
+              id="data"
+              name="data"
+              placeholder="dd/mm/aa"
+              pattern="\d{2}/\d{2}/\d{2}"
+              inputmode="numeric"
+              maxlength="8"
+              title="Digite a data no formato dd/mm/aa, apenas números"
+            />
+          </div>
+          <div class="form-group">
+            <label for="horario">Horário:</label>
+            <input
+              type="text"
+              id="horario"
+              name="horario"
+              placeholder="hhmm"
+              pattern="\d{4}"
+              inputmode="numeric"
+              maxlength="4"
+              title="Digite o horário no formato hhmm, apenas números"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sala">Salas:</label>
+            <input type="text" id="sala" name="sala" placeholder="Sala" />
+          </div>
+          <div class="form-group">
+            <label for="numero">Número Reserva:</label>
+            <input type="text" id="numero" name="numero" placeholder="Número" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" style="flex: 2">
+            <label for="categoria">Categorias:</label>
+            <input
+              type="text"
+              id="categoria"
+              name="categoria"
+              placeholder="Busca"
+            />
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn-buscar">Buscar</button>
+          <button type="reset" class="btn-limpar">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
