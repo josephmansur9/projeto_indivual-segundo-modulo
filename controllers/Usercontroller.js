@@ -30,11 +30,12 @@ const getUserById = async (req, res) => {
 const createUser = async (req, res) => {
   try {
     const { name, lastname, id_curso } = req.body;
-    const result = await db.query(
-      "INSERT INTO users (name, lastname, id_curso) VALUES ($1, $2, $3) RETURNING *",
+    await db.query(
+      "INSERT INTO users (name, lastname, id_curso) VALUES ($1, $2, $3)",
       [name, lastname, id_curso]
     );
-    res.status(201).json(result.rows[0]);
+    // Redirect to login page after successful registration
+    res.redirect("/");
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

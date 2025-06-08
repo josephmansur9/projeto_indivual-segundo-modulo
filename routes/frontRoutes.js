@@ -10,6 +10,15 @@ router.get("/", (req, res) => {
   });
 });
 
+// ...existing code...
+router.get("/cadastro", (req, res) => {
+  res.render(path.join(__dirname, "../views/layout/main"), {
+    pageTitle: "Cadastro",
+    content: path.join(__dirname, "../views/pages/views/cadastro"),
+  });
+});
+// ...existing code...
+
 router.get("/about", (req, res) => {
   res.render(path.join(__dirname, "../views/layout/main"), {
     pageTitle: "Página Inicial",
