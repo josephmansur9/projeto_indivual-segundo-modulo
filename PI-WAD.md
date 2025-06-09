@@ -167,7 +167,31 @@ Em uma aplicação web, os endpoints são como os endereços específicos para o
 | `DELETE`|`/:id`    | Deletar registro    | `roomController.deleteRoom`    |
 ### 3.7 Interface e Navegação (Semana 07)
 
-*Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+
+
+Para essa entrega foi feita uma integração front-back com fetch API usada para buscar/enviar dados. As views consequentemente foram conectadas com o banco de dados; além disso, foi feita uma estilização CSS das páginas HMTL como as telas a seguir:
+
+
+<div align="center">
+    <small><strong style="font-size: 12px;">Tela de Login(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.10.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+<div align="center">
+    <small><strong style="font-size: 12px;">Tela de Cadastro(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.26.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+
+<div align="center">
+    <small><strong style="font-size: 12px;">Tela de Reservas(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.51.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+As telas seguem uma ordem lógica, onde o usuario vai da tela de login para a tela de reserva caso ele tenha uma conta. Se o usuario não tem conta ele cria uma, volta para a tela de login e entra na tela de reservas.
 
 ---
 
