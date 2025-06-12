@@ -199,13 +199,13 @@ As telas seguem uma ordem lógica, onde o usuario vai da tela de login para a te
 
 ### 4.1 Demonstração do Sistema Web (Semana 8)
 
-*VIDEO: Insira o link do vídeo demonstrativo nesta seção*
-*Descreva e ilustre aqui o desenvolvimento do sistema web completo, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+<img src="/assets/video que nao abre.mp4">
 
 ### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
 
-*Indique pontos fortes e pontos a melhorar de maneira geral.*
-*Relacione também quaisquer outras ideias que você tenha para melhorias futuras.*
+Eu queria ter melhorado o Frontend da minha aplicação, acredito que poderia ter feito uma interface mais simples e intuitiva que ajudaria na uso da aplicação. Eu aprendi bastante sobre banco de dados e o modelo MVC, as constulas etc. Acho que o backend foi mais difícil mas consegui fazer uma vez que aprendi direito a base.
+
+Um ponto que funcionou bem foi a organização, com os arquivos separados nas pastas corretas eu consegui trabalhar mais rapidamente no projeto com menos chance de erro também.
 
 
 

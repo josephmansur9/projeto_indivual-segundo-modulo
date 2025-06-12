@@ -1,4 +1,34 @@
-O sistema escolhido foi o de sistema de reservas. Foi pensado que para fazer a reserva o usuário teria primeiro uma identificação com nome, sobrenome e curso. Também teria uma tabela de curso, que teria o id_curso da pessoa e um coordenador caso algo de errado acontecesse na reserva e um responsável precisasse ser consultado. Depois, uma tabela de salas, que teria o ID da sala, o nome da sala e a capacidade. Por fim, uma tabela de reservas que teria o ID do usuário, da sala e da reserva, com uma descrição.
+O nome do projeto é ReservaAluno, ele foi pensando para ajudar alunos que querem reservar salas para poderem estudar nelas. Na aplicação o usuário podera criar um login caso não tenha, onde ele será direcionado para a tela de reservas onde ele podera fazer sua reserva. Caso não tenha reserva nesse horário ela sera salva tela de notificações. Ela serve para alunos poderem ter mais segurança quando quiserem uma sala para reservar, sabendo se ela ja esta reservada.
+
+Para executar o projeto localmente voce precisa executar o código "npm install" no terminal e depois "node sever.js" também no terminal do projeto. Depois para acessar o projeto no navegador a pessoa executa o comando "npm run dev", que te possibilitara de buscar localhost:3000 chegando na aplicação.
+
+
+
+Alguns prints da interface:
+
+div align="center">
+    <small><strong style="font-size: 12px;">Tela de Login(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.10.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+<div align="center">
+    <small><strong style="font-size: 12px;">Tela de Cadastro(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.26.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+
+<div align="center">
+    <small><strong style="font-size: 12px;">Tela de Reservas(Figura 1);</strong></small><br>
+        <img src="/assets/Screenshot 2025-06-09 at 12.28.51.png">
+    <small style="margin-top: 4px; font-size: 10px;">Fonte: Material produzido pelos autores (2025)</small>
+</div>
+
+O link da gravação:
+
+<img src="/assets/video que nao abre.mp4">
+
 
 A estrutura das pastas é o modelo SQL. Ela vai estar assim: 
 
@@ -30,5 +60,3 @@ meu-projeto/
 └── rest.http              # Teste de endpoints (opcional)
 
 ```
-
-para executar o projeto localmente voce precisa executar o código "npm install" no terminal e depois "node sever.js" também no terminal do projeto
