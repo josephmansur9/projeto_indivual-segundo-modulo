@@ -27,7 +27,7 @@ div align="center">
 
 O link da gravação:
 
-<img src="/assets/video que nao abre.mp4">
+[clique aqui para acessar o vídeo](https://drive.google.com/file/d/1MgkW4vOV5mlHG86UxLpAJELrpNq9UCEQ/view?usp=sharing)
 
 
 A estrutura das pastas é o modelo SQL. Ela vai estar assim: 

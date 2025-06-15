@@ -198,8 +198,7 @@ As telas seguem uma ordem lógica, onde o usuario vai da tela de login para a te
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
 
 ### 4.1 Demonstração do Sistema Web (Semana 8)
-
-<img src="/assets/video que nao abre.mp4">
+[clique aqui para acessar o vídeo](https://drive.google.com/file/d/1MgkW4vOV5mlHG86UxLpAJELrpNq9UCEQ/view?usp=sharing)
 
 ### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
 
